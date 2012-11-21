@@ -50,16 +50,15 @@
 
 %% put the page numbers on the bottom in a nice box
 %% even side pages
-\fancyfoot[LE]{\psboxit{box 0.8 setgray fill}
-{\framebox[10mm][c]{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}}
+\fancyfoot[LE]{
+{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}
 %% odd side pages
-\fancyfoot[RO]{\psboxit{box 1 setgray fill}
-{\hspace{\textwidth}\psboxit{box 0.8 setgray fill}
-{\framebox[10mm][c]{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}}}
+\fancyfoot[RO]{
+{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}
 
 %% make the bottom line above the page number box
-\renewcommand{\footrulewidth}{0.4pt}
-\renewcommand{\footruleskip}{0mm}
+%\renewcommand{\footrulewidth}{0.4pt}
+%\renewcommand{\footruleskip}{0mm}
 
 %% bring the style into effect
 \pagestyle{fancy}
@@ -68,11 +67,10 @@
 %% to have the same page number stuff on the bottom
 \fancypagestyle{plain}{
 \fancyhf{}
-\fancyfoot[RO]{\psboxit{box 1 setgray fill}
-{\hspace{\textwidth}\psboxit{box 0.8 setgray fill}
-{\framebox[10mm][c]{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}}}
+\fancyfoot[RO]{
+{\rule{0cm}{4mm}\color{black}{\bfseries \thepage}}}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.5pt}
+%\renewcommand{\footrulewidth}{0.5pt}
 }
 
 %% this next section (till \makeatother) makes sure that blank pages
@@ -98,7 +96,7 @@
 %% load up the fancy title-style package
 \RequirePackage[calcwidth]{titlesec}
 
-\titleformat{\section}[hang]{\sffamily\bfseries}
+\titleformat{\section}[hang]{\bfseries}
 {\Large\thesection}{12pt}{\Large}[{\titlerule[0.5pt]}]
 
 %%
